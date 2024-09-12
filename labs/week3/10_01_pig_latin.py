@@ -22,3 +22,21 @@ The greedy Monkey followed the Fox to the trap. As soon as he saw the meat he gr
 Shortly after that, another election among the Animals was held.
 """
 
+words = story.split() # first words are getting slip and added into words bank
+translated_words = [] # intiating an empty list translated_words = [] where we are going to add the words translated
+
+for word in words: # now for each word in words bank
+    if len(word) ==  0:  # if the length of the word is 0 then 
+        translated_words.append(word) # just append the word into the translated_words list 
+        continue 
+    ''' This immediately jumps to the next iteration of the loop,
+    skipping the rest of the code within the loop body for that particular word. '''
+    first_letter= word[0] # if the words has more characters then this start to execute as the first_letter will become the word[0]
+    rest_of_word =word[1:] # remaining letters of the same word starting from the second letter gets into rest_of_word
+    translated_word = rest_of_word + first_letter + "ay" '''according to the translated word for our pig_latin then we can 
+    say that rest_of_word comes first then the first letter of the same word and adding "ay" at the end.'''
+    translated_words.append(translated_word) # then we will append each word into the translated_words list one by one
+translated_story = " ".join(translated_words) # then we are forming the translated story by using all the transaltedd words using join keyword 
+print(translated_story) # Cool we will print that translated story 
+
+

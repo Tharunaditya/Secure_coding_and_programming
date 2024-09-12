@@ -10,3 +10,17 @@
 
 # If the option is other number: print it is an  invalid option
 
+while True:
+  option = int(input("Enter an option (1-4): "))
+
+  if option == 1:
+    print("Here is your first step")
+  elif option == 2:
+    print("You have some steps to go")
+  elif option == 3:
+    print("You are almost done")
+  elif option == 4:
+    print("Quitting...")
+    break
+  else:
+    print("Invalid option")
