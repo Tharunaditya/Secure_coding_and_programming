@@ -10,6 +10,10 @@ def greater_than_x(n, x):
        True if n > x
        False otherwise
     """
+    if n>x:
+       return True
+    else:
+       return False
 
 
 ### Extra credit

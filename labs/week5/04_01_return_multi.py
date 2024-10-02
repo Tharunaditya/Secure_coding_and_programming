@@ -3,6 +3,8 @@
 
 
 def lower_names(first_name, last_name):
+    return first_name.lower(), last_name.lower()
+   
     """
     Input:
         first_name: str
@@ -22,3 +24,5 @@ def lower_names(first_name, last_name):
 first, last = lower_names("GILAD", "GRESSEL")  # how does this work?
 names = lower_names("GILAD", "GRESSEL")  # what datatype is names?
 
+print(first,last)
+print(names)

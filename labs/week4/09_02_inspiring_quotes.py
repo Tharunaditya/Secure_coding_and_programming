@@ -37,3 +37,8 @@ famous_quotes = [
         "quote": "Standards are always out of date.  That’s what makes them standards.",
     },
 ]
+
+for quote in famous_quotes:
+    first_name, last_name = quote["full_name"].split(maxsplit=1)
+    print(f'"{quote["quote"]}" - {last_name}, {first_name}')
+    

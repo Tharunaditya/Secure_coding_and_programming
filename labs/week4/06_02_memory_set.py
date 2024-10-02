@@ -8,3 +8,25 @@
 # They win if they manage to create a set that has more than 10 items.
 
 # you will need the `input()` function to collect information from the user
+
+score = 0
+unique_numbers = set()
+
+while True:
+  try:
+    number = int(input("Enter a number: "))
+    if number in unique_numbers:
+      print("Duplicate! You lose a point.")
+      score -= 1
+    else:
+      unique_numbers.add(number)
+      print("Number added successfully.")
+  except ValueError:
+    print("Invalid input. Please enter a valid number.")
+
+  if score == -5:
+    print("Game over! You lost 5 points.")
+    break
+  elif len(unique_numbers) > 10:
+    print("Congratulations! You won the game.")
+    break

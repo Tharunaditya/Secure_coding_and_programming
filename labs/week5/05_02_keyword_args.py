@@ -3,7 +3,7 @@
 ## it must use a default value for the keyword argument.
 
 
-def rectangle():
+def rectangle(length,width=10):
     """
     Input:
         length: int
@@ -14,3 +14,4 @@ def rectangle():
         the area of the rectangle
     """
 
+    return length*width

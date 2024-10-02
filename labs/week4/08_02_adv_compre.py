@@ -6,3 +6,10 @@
 # example output
 # {3: [2], 6: [2,4,6], 9:[2,4,6,8].... 300:[2,4,6,...288]}
 
+dictionary = {}
+
+for key in range(3, 302, 3):
+    values = [num for num in range(2, key + 1, 2)]
+    dictionary[key] = values
+
+print(dictionary)

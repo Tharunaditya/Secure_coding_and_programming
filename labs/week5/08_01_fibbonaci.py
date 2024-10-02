@@ -9,7 +9,10 @@ def fib(n):
     return:
         fibbonacci number for n
     """
+    if n <= 1:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
 
-
-# fib(6) should return 8
-# fib(10) should return 55
+print(fib(6)) #should return 8
+print(fib(10)) #should return 55

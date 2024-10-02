@@ -1,16 +1,28 @@
-# recreate your previous generator from 01, but use a generator expression
+def list_of_even_nums(start, stop):
+    """
+    Generates even numbers within a specified range.
 
+    Args:
+        start: The starting value (inclusive).
+        stop: The ending value (exclusive).
 
-my_gen = ()  # fill out the code to make it work!
+    Returns:
+        A generator object yielding even numbers.
+    """
+    for num in range(start, stop):
+        if num % 2 == 0:
+            yield num
 
+# Create a generator using the function
+my_gen = list_of_even_nums(2, 11)
 
-# practice using your generator
+# Iterate over the generator and print even numbers
 for i in my_gen:
     print(i)
 
-
-print("second run!")
+print("Second run!")
 print()
-# does it work two times?
+
+# Iterate over the generator again (it will be empty)
 for i in my_gen:
     print(i)

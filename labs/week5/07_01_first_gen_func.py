@@ -10,11 +10,14 @@ def list_of_even_nums(start, stop):
         stop: int
     returns:
         generator object
-
+    
     Your function should create a generator object that will
     be the sequence of even numbers from start to stop
     Make sure to use the yield keyword!
     """
+    for num in range(start, stop + 1):
+        if num % 2 == 0:
+            yield num
 
 
 # use your generator
