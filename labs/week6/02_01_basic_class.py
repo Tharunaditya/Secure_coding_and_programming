@@ -1,22 +1,41 @@
-# make the most simple class possible
+# Simple class
+class Simpleclass:
+    def __init__(self,name):
+        self.name = name 
+       
+
+        
+# Create an instance and print the attribute
+Namevar= Simpleclass('Tharunaditya')
+print(Namevar)
+print(Namevar.name)
 
 
-class SimpleClass:
-    pass
+# Less simple class
+class pc:
+    def __init__(self,processor,ram,memory):
+        self.processor = processor
+        self.ram = ram
+        self.memory = memory 
+        
+    def w_p(self):
+        return f"Processor : {self.processor}"
+    def raam(self):
+        return f"Ram : {self.ram}"
+    def memo(self):
+        return f"Memory : {self.memory}"
 
 
-# create an instance of your SimpleClass and print it out
+
+tharunpc=pc('i7','16gb','1tb')
+
+# Instance method Example of an instance method
+print(tharunpc.raam())
 
 
-# now add some functionality to your simple class
+# Access class attribute from class and instance
+pc('i3','8gb','512gb')
+print(pc('i3','8gb','512gb').w_p())
+print(pc('i3','8gb','512gb').raam())
 
-
-class LessSimpleClass:
-    pass
-    # add one class attribute
-
-    # add a class method
-
-
-# print out your class attribute both from an instance of the class and through the class directly
-# run the method - both directly from the class and through an instance.
+print(tharunpc.w_p())

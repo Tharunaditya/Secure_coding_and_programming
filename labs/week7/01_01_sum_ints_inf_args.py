@@ -11,6 +11,13 @@
 # input: 2,2,2,200.2           # **note*** that 200.2 is _not_ an integer, so we don't sum it.
 # output: 6
 
+def sum_integers(*args):
+  sum = 0
+  for item in args:
+    if type(item) is int:
+      sum += item
+  return sum
 
-def sum_ints():
-    pass
+
+print(sum_integers(1, 2, 3, 4, 'hi', 'hi', (1, 2, 3), 10, ['a','b','c'])) 
+print(sum_integers(2, 2, 2, 200.2,['a','b','c'],['a','b','c','d'], ['a','b','c','d','e'])) 

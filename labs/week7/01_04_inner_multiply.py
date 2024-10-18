@@ -3,3 +3,15 @@
 
 # example input: (1,2), (2,2), (3,2), (4,5)
 # output: [2,4,6,20]
+
+def tupmul(*tuples):
+    result = []
+    for tup in tuples:
+        product = 1
+        for item in tup:
+            product *=item
+        result.append(product)
+    return result
+
+print(tupmul((1,2), (2,2), (3,2), (4,5)))
+        

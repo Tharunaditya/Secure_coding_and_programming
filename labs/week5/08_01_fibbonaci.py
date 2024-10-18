@@ -16,3 +16,4 @@ def fib(n):
 
 print(fib(6)) #should return 8
 print(fib(10)) #should return 55
+# 1 1 2 3 5 8 13 21 
