@@ -14,3 +14,24 @@ Remember, your string needs to _grow_ with the *args - it needs infinite potenti
 
 """
 
+# name ="Gilad"
+# job= "washing dishes"
+# posses =('lawn-mower', 'house', 'cat', 'bat')
+# posses_str = ", ".join(posses[:-1])
+# if len(posses) > 1:
+#   posses_str += f", and {posses[-1]}"
+# elif posses:
+#   posses_str = posses[0]
+# print(f"Hello {name}, I heard your job of {job} allows you to own a {posses_str}.")
+   
+
+def describer(name,job,*posses):
+  posses_str = ", ".join(posses[:-1])
+  if len(posses) > 1:
+    posses_str += f", and {posses[-1]}"
+  elif posses:
+    posses_str = posses[0]
+  return f"Hello {name}, I heard your job of {job} allows you to own a {posses_str}."
+
+message = describer('Tharunaditya','software','coding','debuging','fixing','testing','packaging')
+print(message)

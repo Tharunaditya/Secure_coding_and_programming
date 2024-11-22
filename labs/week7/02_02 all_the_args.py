@@ -18,3 +18,22 @@ output:
 
 The string should accomadate any number of *args and **kwargs.
 """
+
+
+def describer(name,job,*adj, **posses):
+    if adj:
+       adj_str = ','.join(adj[:-1])
+       if len(adj) >1:
+          adj_str += f", and {adj[-1]}"
+    else:
+       adj_str = ""
+    posses_str_list = []
+    for item, value in posses.items():
+       posses_str_list.append(f"a {item} worth {value}")
+    if posses_str_list: 
+       posses_str_list= ",".join(posses_str_list[:-1])+f" and {posses_str_list[-1][2::]}"
+    else: 
+       posses_str_list = ""
+    return f"{name} is a {job} who is {adj_str}. {name} has {posses_str_list}"
+message=describer('Gilad', 'teacher', 'happy', 'amazing', 'sooooo cool', bike = 2000, house = 1000, shoes = 20)
+print(message)

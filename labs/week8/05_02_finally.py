@@ -9,4 +9,12 @@ if an error happens.
 
 The purpose of this exercise is to just practice observing that
 """
-
+old = "tharunaditya"
+try:
+     int(old)
+except Exception as e:
+    # print(f"The error is  {e}")
+    pass
+finally:
+    print("This will always print, even if an error occurs.")
+    

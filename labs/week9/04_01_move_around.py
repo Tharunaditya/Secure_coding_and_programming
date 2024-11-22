@@ -10,3 +10,21 @@ Path.glob(“*”)  returns a generator that you can use to iterate over all fil
 Path.iterdir()
 
 """
+import os
+from pathlib  import Path
+def look():
+    present_dir = Path.cwd()
+    print("Present working directory:",present_dir)
+    allfiles = os.listdir()
+    print("Files and directories in the current directory:",)
+    for item in allfiles:
+        print(item)
+    pyfiles= Path.cwd().glob("*.py")
+    print("The python files prsent here are :")
+    for item in pyfiles:
+        print(item)
+    dir_entries = Path.cwd().iterdir()
+    for item in dir_entries:   
+        print(dir_entries)
+
+look()

@@ -1,1 +1,3 @@
-print("Hi i am atrbute called by your instance here : ",Nandu1())
+
+# apple.describe_fruit()
+# apple.eat()

@@ -2,17 +2,19 @@
 Log errors in the following function
 
 """
-
+import logging
 
 def add_em_up(*args):
-    my_sum = 0
+    sum = 0
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.ERROR)
     for item in args:
         try:
             sum += item
-        except TypeError:
-            pass
-            # do something here
-    return my_sum
+        except TypeError as e :
+            # something
+            print(f"TypeError occured while adding {item} : {e}")
+    return sum
 
 
 ## Your logging should be able to report what went wrong with the follow code
