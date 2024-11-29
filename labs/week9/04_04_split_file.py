@@ -13,7 +13,7 @@ import os
 def split_file(file_path, chunk_size=100):
 
  
-    output_dir = "split_files"
+    output_dir = "splited_files"
     os.makedirs(output_dir, exist_ok=True)
 
     with open(file_path, 'r') as f:
